@@ -32,7 +32,7 @@ class App extends Component {
     };
 
     this.handleClick = this.handleClick.bind(this);
-    //this.handleResetClick = this.handleResetClick.bind(this);
+    this.handleReset = this.handleReset.bind(this);
   }
 
   handleClick(event) {
@@ -46,9 +46,11 @@ class App extends Component {
     }
   }
 
-  // handleResetClick() {
-  //   this.state.flagLogo = ['','','','','','','','',''];
-  // }
+  handleReset() {
+    this.setState({
+      flagLogo: ['','','','','','','','','']
+    });
+  }
 
   table() {
     return (
@@ -72,6 +74,12 @@ class App extends Component {
     );
   }
 
+  resetButton() {
+    return (
+      <button onClick={this.handleReset}>Reset</button>
+    );
+  }
+
 
   render() {
     return (
@@ -82,6 +90,7 @@ class App extends Component {
         </div>
         <div className="center-text">
           {this.table()}
+          {checkWinner(this.state.flagLogo) == 'X' || checkWinner(this.state.flagLogo) == 'O' ? this.resetButton() : null}
         </div>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
