@@ -56,19 +56,19 @@ class App extends Component {
     return (
       <table>
         <tr>
-          <td data-index="0" onClick={this.handleClick}>{this.state.flagLogo[0]}</td>
-          <td data-index="1" onClick={this.handleClick}>{this.state.flagLogo[1]}</td>
-          <td data-index="2" onClick={this.handleClick}>{this.state.flagLogo[2]}</td>
+          <td data-index="0" onClick={checkWinner(this.state.flagLogo) == 'X' || checkWinner(this.state.flagLogo) == 'O' ? null : this.handleClick}>{this.state.flagLogo[0]}</td>
+          <td data-index="1" onClick={checkWinner(this.state.flagLogo) == 'X' || checkWinner(this.state.flagLogo) == 'O' ? null : this.handleClick}>{this.state.flagLogo[1]}</td>
+          <td data-index="2" onClick={checkWinner(this.state.flagLogo) == 'X' || checkWinner(this.state.flagLogo) == 'O' ? null : this.handleClick}>{this.state.flagLogo[2]}</td>
         </tr>
         <tr>
-          <td data-index="3" onClick={this.handleClick}>{this.state.flagLogo[3]}</td>
-          <td data-index="4" onClick={this.handleClick}>{this.state.flagLogo[4]}</td>
-          <td data-index="5" onClick={this.handleClick}>{this.state.flagLogo[5]}</td>
+          <td data-index="3" onClick={checkWinner(this.state.flagLogo) == 'X' || checkWinner(this.state.flagLogo) == 'O' ? null : this.handleClick}>{this.state.flagLogo[3]}</td>
+          <td data-index="4" onClick={checkWinner(this.state.flagLogo) == 'X' || checkWinner(this.state.flagLogo) == 'O' ? null : this.handleClick}>{this.state.flagLogo[4]}</td>
+          <td data-index="5" onClick={checkWinner(this.state.flagLogo) == 'X' || checkWinner(this.state.flagLogo) == 'O' ? null : this.handleClick}>{this.state.flagLogo[5]}</td>
         </tr>
         <tr>
-          <td data-index="6" onClick={this.handleClick}>{this.state.flagLogo[6]}</td>
-          <td data-index="7" onClick={this.handleClick}>{this.state.flagLogo[7]}</td>
-          <td data-index="8" onClick={this.handleClick}>{this.state.flagLogo[8]}</td>
+          <td data-index="6" onClick={checkWinner(this.state.flagLogo) == 'X' || checkWinner(this.state.flagLogo) == 'O' ? null : this.handleClick}>{this.state.flagLogo[6]}</td>
+          <td data-index="7" onClick={checkWinner(this.state.flagLogo) == 'X' || checkWinner(this.state.flagLogo) == 'O' ? null : this.handleClick}>{this.state.flagLogo[7]}</td>
+          <td data-index="8" onClick={checkWinner(this.state.flagLogo) == 'X' || checkWinner(this.state.flagLogo) == 'O' ? null : this.handleClick}>{this.state.flagLogo[8]}</td>
         </tr>
       </table>
     );
